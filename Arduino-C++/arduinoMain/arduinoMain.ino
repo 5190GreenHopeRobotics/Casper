@@ -1,4 +1,3 @@
-
 #include <Wire.h>
 #include <Adafruit_NeoPixel.h>
 #ifdef __AVR__
@@ -35,7 +34,7 @@ void burnLedColor(const int ledNum, const color colorWanted) {
 
 }
 
-bool receivedFirst;
+bool receivedFirst = false;
 
 // handler for receiving data
 void recieveData(int num) {
@@ -55,7 +54,7 @@ void recieveData(int num) {
       light::pixels.show();
       receivedFirst = true;
     }
-
+    
     /*
      * we will ignore the register byte because it does not do anything
      */
@@ -67,9 +66,10 @@ void recieveData(int num) {
     unsigned char r = Wire.read();
     unsigned char g = Wire.read();
     unsigned char b = Wire.read();
+    
     light::pixels.setPixelColor(id, r, g, b);
     light::pixels.show();
-  }
+  } 
 }
 
 
@@ -92,5 +92,22 @@ void setup() {
 
 // event based so do nothing
 void loop() {
+  static unsigned long time1, time2;
+  static unsigned int steps = 0;
 
+  if(!steps) {
+    time1 = millis();
+    steps++;
+  } else {
+    time2 = millis();
+    if (time2 > time1) {
+      if (time2 - time1 > 5000) {
+        // Every five 
+        Wire.begin(84);
+        Wire.onReceive(recieveData);
+      }
+    } else {
+      time1 = millis();
+    }   
+  }
 }
