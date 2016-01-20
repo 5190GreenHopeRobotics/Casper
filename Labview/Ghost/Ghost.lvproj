@@ -139,6 +139,7 @@ AddOutputFilter chunkFilter
 			<Item Name="LED Lights Subsystem.vi" Type="VI" URL="../LED Lights/LED Lights Subsystem.vi"/>
 			<Item Name="LED Lights Open.vi" Type="VI" URL="../LED Lights/LED Lights Open.vi"/>
 			<Item Name="ColorRef.ctl" Type="VI" URL="../LED Lights/ColorRef.ctl"/>
+			<Item Name="LED Light Set Color Range.vi" Type="VI" URL="../LED Lights/LED Light Set Color Range.vi"/>
 		</Item>
 		<Item Name="NavX" Type="Folder">
 			<Item Name="NavX.vi" Type="VI" URL="../NavX/NavX.vi"/>
