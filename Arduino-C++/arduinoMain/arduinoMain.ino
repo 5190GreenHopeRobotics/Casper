@@ -41,7 +41,6 @@ unsigned long lastReceived = 0;
 void recieveData(int num) {
   lastReceived = millis();
   // roborio should send 5 bytes at a time
-  if (num == 5) {
     //Serial.println("Receive 5");
 
     /*
@@ -61,17 +60,26 @@ void recieveData(int num) {
        we will ignore the register byte because it does not do anything
     */
     unsigned char registerByte = Wire.read();
-    /*
-       read the id, r, g, and b
-    */
-    unsigned char id = Wire.read();
-    unsigned char r = Wire.read();
-    unsigned char g = Wire.read();
-    unsigned char b = Wire.read();
 
-    light::pixels.setPixelColor(id, r, g, b);
+    if (registerByte == 0) {
+      /*
+         read the id, r, g, and b
+      */
+      unsigned char id = Wire.read();
+      unsigned char r = Wire.read();
+      unsigned char g = Wire.read();
+      unsigned char b = Wire.read();
+
+      light::pixels.setPixelColor(id, r, g, b);
+    } else if (registerByte == 1) {
+      // Show a range of colors
+      unsigned char idFrom = Wire.read();
+      unsigned char idTo = Wire.read();
+      unsigned char r = Wire.read();
+      unsigned char g = Wire.read();
+      unsigned char b = Wire.read();
+    }
     light::pixels.show();
-  }
 }
 
 
