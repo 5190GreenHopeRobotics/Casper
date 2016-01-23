@@ -646,6 +646,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Area Scoring.vi" Type="VI" URL="../Vision Support Code/Area Scoring.vi"/>
 			<Item Name="Moment Score.vi" Type="VI" URL="../Vision Support Code/Moment Score.vi"/>
 			<Item Name="navX-MXP IMU.lvlib" Type="Library" URL="../../navx-mxp/labview/navX-MXP Library/navX-MXP IMU.lvlib"/>
+			<Item Name="WPI_SerialPortOpen_USB.vi" Type="VI" URL="/../navx-mxp/labview/navX-MXP Library/SERIAL/IO/NI WPI/WPI_SerialPortOpen_USB.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
