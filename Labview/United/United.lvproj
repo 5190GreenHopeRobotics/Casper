@@ -148,6 +148,12 @@ AddOutputFilter chunkFilter
 		<Item Name="Angular PID" Type="Folder" URL="../Angular PID">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="Save and Load Controls" Type="Folder">
+			<Item Name="Read and Write Controls to Automatic Config File.vi" Type="VI" URL="../../Load and Save Controls_LV2009.llb/Read and Write Controls to Automatic Config File.vi"/>
+			<Item Name="Read and Write Controls to Config File.vi" Type="VI" URL="../../Load and Save Controls_LV2009.llb/Read and Write Controls to Config File.vi"/>
+			<Item Name="RWC_Actions.ctl" Type="VI" URL="../../Load and Save Controls_LV2009.llb/RWC_Actions.ctl"/>
+			<Item Name="Read and Write Controls to File.vi" Type="VI" URL="../Read and Write Controls to File.vi"/>
+		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
 		<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
@@ -609,7 +615,6 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_SerialPortRead.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/SerialPort/WPI_SerialPortRead.vi"/>
 				<Item Name="WPI_SerialPortClose.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/SerialPort/WPI_SerialPortClose.vi"/>
 				<Item Name="WPI_SerialPortTermination.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/SerialPort/WPI_SerialPortTermination.vi"/>
-				<Item Name="WPI_CANTalonSRX_ChangeMode.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ChangeMode.vi"/>
 				<Item Name="WPI_CANJaguar_UpdateSyncGroup.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/Jaguar/WPI_CANJaguar_UpdateSyncGroup.vi"/>
 				<Item Name="WPI_RobotDriveGetMotorControlReference.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/RobotDrive/WPI_RobotDriveGetMotorControlReference.vi"/>
 				<Item Name="WPI_RobotDriveMotors.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/RobotDrive/WPI_RobotDriveMotors.vi"/>
