@@ -32,7 +32,7 @@
 	</Item>
 	<Item Name="Target" Type="RT myRIO">
 		<Property Name="alias.name" Type="Str">Target</Property>
-		<Property Name="alias.value" Type="Str">roboRIO-5190-FRC.local</Property>
+		<Property Name="alias.value" Type="Str">172.22.11.2</Property>
 		<Property Name="CCSymbols" Type="Str">TARGET_TYPE,RT;OS,Linux;CPU,ARM;DeviceCode,76F2;</Property>
 		<Property Name="crio.ControllerPID" Type="Str">76F2</Property>
 		<Property Name="crio.family" Type="Str">ARMLinux</Property>
@@ -145,9 +145,6 @@ AddOutputFilter chunkFilter
 			<Item Name="NavX.vi" Type="VI" URL="../NavX/NavX.vi"/>
 			<Item Name="NavX Global.vi" Type="VI" URL="../NavX/NavX Global.vi"/>
 		</Item>
-		<Item Name="Angular PID" Type="Folder" URL="../Angular PID">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
 		<Item Name="Save and Load Controls" Type="Folder">
 			<Item Name="Read and Write Controls to Automatic Config File.vi" Type="VI" URL="../../Load and Save Controls_LV2009.llb/Read and Write Controls to Automatic Config File.vi"/>
 			<Item Name="Read and Write Controls to Config File.vi" Type="VI" URL="../../Load and Save Controls_LV2009.llb/Read and Write Controls to Config File.vi"/>
@@ -155,6 +152,9 @@ AddOutputFilter chunkFilter
 			<Item Name="Read and Write Controls to File.vi" Type="VI" URL="../Read and Write Controls to File.vi"/>
 		</Item>
 		<Item Name="LowShooter" Type="Folder" URL="../LowShooter">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="AddonMotors" Type="Folder" URL="../AddonMotors">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
@@ -665,6 +665,11 @@ AddOutputFilter chunkFilter
 			<Item Name="Area Scoring.vi" Type="VI" URL="../Vision Support Code/Area Scoring.vi"/>
 			<Item Name="Moment Score.vi" Type="VI" URL="../Vision Support Code/Moment Score.vi"/>
 			<Item Name="navX-MXP IMU.lvlib" Type="Library" URL="../../Z-Old Code/navx-mxp/labview/navX-MXP Library/navX-MXP IMU.lvlib"/>
+			<Item Name="Angular PID Check for New Command.vi" Type="VI" URL="../Angular PID/Implementation/Infrastructure/Angular PID Check for New Command.vi"/>
+			<Item Name="Angular PID Controller Initialization.vi" Type="VI" URL="../Angular PID/Implementation/Infrastructure/Angular PID Controller Initialization.vi"/>
+			<Item Name="Angular PID Controller.vi" Type="VI" URL="../Angular PID/Implementation/Angular PID Controller.vi"/>
+			<Item Name="Angular PID Operations.ctl" Type="VI" URL="../Angular PID/Implementation/Angular PID Operations.ctl"/>
+			<Item Name="Angular PID Setpoints.ctl" Type="VI" URL="../Angular PID/Implementation/Angular PID Setpoints.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
