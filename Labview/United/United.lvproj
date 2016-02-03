@@ -719,11 +719,6 @@ AddOutputFilter chunkFilter
 			<Item Name="Calculate Particle Scores.vi" Type="VI" URL="../Vision Support Code/Calculate Particle Scores.vi"/>
 			<Item Name="Label Targets2.vi" Type="VI" URL="../Vision Support Code/Label Targets2.vi"/>
 			<Item Name="Normalize Coordinates.vi" Type="VI" URL="../Vision Support Code/Normalize Coordinates.vi"/>
-			<Item Name="Gear.ctl" Type="VI" URL="../Gear/Implementation/Gear.ctl"/>
-			<Item Name="Gear Setpoints.ctl" Type="VI" URL="../Gear/Implementation/Gear Setpoints.ctl"/>
-			<Item Name="Gear Operations.ctl" Type="VI" URL="../Gear/Implementation/Gear Operations.ctl"/>
-			<Item Name="Change Gear.vi" Type="VI" URL="../Gear/Commands/Change Gear.vi"/>
-			<Item Name="Gear Command Helper.vi" Type="VI" URL="../Gear/Implementation/Infrastructure/Gear Command Helper.vi"/>
 			<Item Name="Get camera FOVs.vi" Type="VI" URL="../Vision Support Code/Get camera FOVs.vi"/>
 			<Item Name="Compute DistanceToTarget2.vi" Type="VI" URL="../Vision Support Code/Compute DistanceToTarget2.vi"/>
 			<Item Name="Normalized Range Compare 2016.vi" Type="VI" URL="../Vision Support Code/Normalized Range Compare 2016.vi"/>
@@ -737,6 +732,11 @@ AddOutputFilter chunkFilter
 			<Item Name="Angular PID Controller.vi" Type="VI" URL="../Angular PID/Implementation/Angular PID Controller.vi"/>
 			<Item Name="Angular PID Operations.ctl" Type="VI" URL="../Angular PID/Implementation/Angular PID Operations.ctl"/>
 			<Item Name="Angular PID Setpoints.ctl" Type="VI" URL="../Angular PID/Implementation/Angular PID Setpoints.ctl"/>
+			<Item Name="Gear.ctl" Type="VI" URL="../Gear/Implementation/Gear.ctl"/>
+			<Item Name="Gear Setpoints.ctl" Type="VI" URL="../Gear/Implementation/Gear Setpoints.ctl"/>
+			<Item Name="Gear Operations.ctl" Type="VI" URL="../Gear/Implementation/Gear Operations.ctl"/>
+			<Item Name="Change Gear.vi" Type="VI" URL="../Gear/Commands/Change Gear.vi"/>
+			<Item Name="Gear Command Helper.vi" Type="VI" URL="../Gear/Implementation/Infrastructure/Gear Command Helper.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
