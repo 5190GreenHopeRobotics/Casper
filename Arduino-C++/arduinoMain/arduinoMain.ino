@@ -35,17 +35,16 @@ void burnLedColor(const int ledNum, const color colorWanted) {
 }
 
 bool receivedFirst = false;
-unsigned long lastReceived = 0;
 
 // handler for receiving data
 void recieveData(int num) {
-  lastReceived = millis();
   // roborio should send 5 bytes at a time
+  if (num == 5) {
     //Serial.println("Receive 5");
 
     /*
-       if received the first byte, set all led to rgb 0,0,0, and set the first led to green
-    */
+     * if received the first byte, set all led to rgb 0,0,0, and set the first led to green
+     */
     if (!receivedFirst) {
       for (int i = 1; i < NUMPIXELS; i++) {
         light::pixels.setPixelColor(i, 0, 0, 0);
@@ -55,31 +54,22 @@ void recieveData(int num) {
       light::pixels.show();
       receivedFirst = true;
     }
-
+    
     /*
-       we will ignore the register byte because it does not do anything
-    */
+     * we will ignore the register byte because it does not do anything
+     */
     unsigned char registerByte = Wire.read();
-
-    if (registerByte == 0) {
-      /*
-         read the id, r, g, and b
-      */
-      unsigned char id = Wire.read();
-      unsigned char r = Wire.read();
-      unsigned char g = Wire.read();
-      unsigned char b = Wire.read();
-
-      light::pixels.setPixelColor(id, r, g, b);
-    } else if (registerByte == 1) {
-      // Show a range of colors
-      unsigned char idFrom = Wire.read();
-      unsigned char idTo = Wire.read();
-      unsigned char r = Wire.read();
-      unsigned char g = Wire.read();
-      unsigned char b = Wire.read();
-    }
+    /*
+     * read the id, r, g, and b
+     */
+    unsigned char id = Wire.read();
+    unsigned char r = Wire.read();
+    unsigned char g = Wire.read();
+    unsigned char b = Wire.read();
+    
+    light::pixels.setPixelColor(id, r, g, b);
     light::pixels.show();
+  } 
 }
 
 
@@ -96,7 +86,7 @@ void setup() {
   for (int i = 1; i < NUMPIXELS; i++) {
     light::pixels.setPixelColor(i, 25, 64, 25);
   }
-  light::pixels.setPixelColor(0, 64, 0, 0, 0);
+  light::pixels.setPixelColor(0,64,0,0,0);
   light::pixels.show();
 }
 
@@ -104,26 +94,20 @@ void setup() {
 void loop() {
   static unsigned long time1, time2;
   static unsigned int steps = 0;
-  if (millis() - lastReceived > 10000) {
-    for (int i = 1; i < NUMPIXELS; i++) {
-      light::pixels.setPixelColor(i, 25, 64, 25);
-    }
-    light::pixels.setPixelColor(0, 64, 0, 0, 0);
-    light::pixels.show();
-  }
-  if (!steps) {
+
+  if(!steps) {
     time1 = millis();
     steps++;
   } else {
     time2 = millis();
     if (time2 > time1) {
       if (time2 - time1 > 5000) {
-        // Every five
+        // Every five 
         Wire.begin(84);
         Wire.onReceive(recieveData);
       }
     } else {
       time1 = millis();
-    }
+    }   
   }
 }
