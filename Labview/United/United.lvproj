@@ -168,6 +168,11 @@ AddOutputFilter chunkFilter
 		<Item Name="Drawbridge" Type="Folder" URL="../Drawbridge">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="Lidar" Type="Folder">
+			<Item Name="Lidar Read.vi" Type="VI" URL="../Lidar/Lidar Read.vi"/>
+			<Item Name="Lidar Open.vi" Type="VI" URL="../Lidar/Lidar Open.vi"/>
+			<Item Name="Lidar Type Def.ctl" Type="VI" URL="../Lidar/Lidar Type Def.ctl"/>
+		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
 		<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
