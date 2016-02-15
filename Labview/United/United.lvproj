@@ -192,6 +192,11 @@ AddOutputFilter chunkFilter
 				<Item Name="Gear.ctl" Type="VI" URL="../Gear/Implementation/Gear.ctl"/>
 			</Item>
 		</Item>
+		<Item Name="Solenoids" Type="Folder">
+			<Item Name="Set Solenoid.vi" Type="VI" URL="../Solenoids/Set Solenoid.vi"/>
+			<Item Name="Solenoid Global.vi" Type="VI" URL="../Solenoids/Solenoid Global.vi"/>
+			<Item Name="Solenoids.ctl" Type="VI" URL="../Solenoids/Solenoids.ctl"/>
+		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
 		<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
