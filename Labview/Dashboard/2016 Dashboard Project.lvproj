@@ -21,25 +21,26 @@
 			<Item Name="Adjust Dashboard Window.vi" Type="VI" URL="../Adjust Dashboard Window.vi"/>
 		</Item>
 		<Item Name="Vision Support Code" Type="Folder">
-			<Item Name="Area Scoring.vi" Type="VI" URL="../Vision Support Code/Area Scoring.vi"/>
-			<Item Name="Aspect Ratio Score 2016.vi" Type="VI" URL="../Vision Support Code/Aspect Ratio Score 2016.vi"/>
-			<Item Name="Calculate Particle Scores.vi" Type="VI" URL="../Vision Support Code/Calculate Particle Scores.vi"/>
-			<Item Name="Calibration Helper2.vi" Type="VI" URL="../Vision Support Code/Calibration Helper2.vi"/>
-			<Item Name="Camera Types.ctl" Type="VI" URL="../Vision Support Code/Camera Types.ctl"/>
-			<Item Name="Compute DistanceToTarget2.vi" Type="VI" URL="../Vision Support Code/Compute DistanceToTarget2.vi"/>
-			<Item Name="Get camera FOVs.vi" Type="VI" URL="../Vision Support Code/Get camera FOVs.vi"/>
-			<Item Name="Label Targets2.vi" Type="VI" URL="../Vision Support Code/Label Targets2.vi"/>
+			<Item Name="Area Scoring.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Area Scoring.vi"/>
+			<Item Name="Aspect Ratio Score 2016.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Aspect Ratio Score 2016.vi"/>
+			<Item Name="Calculate Particle Scores.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Calculate Particle Scores.vi"/>
+			<Item Name="Calibration Helper2.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Calibration Helper2.vi"/>
+			<Item Name="Camera Types.ctl" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Camera Types.ctl"/>
+			<Item Name="Compute DistanceToTarget2.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Compute DistanceToTarget2.vi"/>
+			<Item Name="Get camera FOVs.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Get camera FOVs.vi"/>
+			<Item Name="Label Targets2.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Label Targets2.vi"/>
 			<Item Name="Label Targets3.vi" Type="VI" URL="../Vision Support Code/Label Targets3.vi"/>
-			<Item Name="Moment Score.vi" Type="VI" URL="../Vision Support Code/Moment Score.vi"/>
-			<Item Name="Normalize Coordinates.vi" Type="VI" URL="../Vision Support Code/Normalize Coordinates.vi"/>
+			<Item Name="Moment Score.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Moment Score.vi"/>
+			<Item Name="Normalize Coordinates.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Normalize Coordinates.vi"/>
 			<Item Name="Normalize Coordinates2.vi" Type="VI" URL="../Vision Support Code/Normalize Coordinates2.vi"/>
-			<Item Name="Normalize Score.vi" Type="VI" URL="../Vision Support Code/Normalize Score.vi"/>
-			<Item Name="Normalized Range Compare 2016.vi" Type="VI" URL="../Vision Support Code/Normalized Range Compare 2016.vi"/>
-			<Item Name="Sorted Particle Report 2016.vi" Type="VI" URL="../Vision Support Code/Sorted Particle Report 2016.vi"/>
+			<Item Name="Normalize Score.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Normalize Score.vi"/>
+			<Item Name="Normalized Range Compare 2016.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Normalized Range Compare 2016.vi"/>
+			<Item Name="Sorted Particle Report 2016.vi" Type="VI" URL="../../../../../Program Files (x86)/National Instruments/LabVIEW 2015/examples/FRC/roboRIO/Vision/2016 Vision Example/Vision Support Code/Sorted Particle Report 2016.vi"/>
 		</Item>
 		<Item Name="Dashboard Main.vi" Type="VI" URL="../Dashboard Main.vi"/>
 		<Item Name="Read-Write-Settings.vi" Type="VI" URL="../Read-Write-Settings.vi"/>
 		<Item Name="FRC Color Processing Example.vi" Type="VI" URL="../FRC Color Processing Example.vi"/>
+		<Item Name="Untitled 1.vi" Type="VI" URL="../Untitled 1.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="IMAQ Create" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ Create"/>
@@ -307,6 +308,19 @@
 			<Item Name="niimaqdx.dll" Type="Document" URL="niimaqdx.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Camera Types.ctl" Type="VI" URL="../Vision Support Code/Camera Types.ctl"/>
+			<Item Name="Compute DistanceToTarget2.vi" Type="VI" URL="../Vision Support Code/Compute DistanceToTarget2.vi"/>
+			<Item Name="Get camera FOVs.vi" Type="VI" URL="../Vision Support Code/Get camera FOVs.vi"/>
+			<Item Name="Sorted Particle Report 2016.vi" Type="VI" URL="../Vision Support Code/Sorted Particle Report 2016.vi"/>
+			<Item Name="Label Targets2.vi" Type="VI" URL="../Vision Support Code/Label Targets2.vi"/>
+			<Item Name="Calculate Particle Scores.vi" Type="VI" URL="../Vision Support Code/Calculate Particle Scores.vi"/>
+			<Item Name="Moment Score.vi" Type="VI" URL="../Vision Support Code/Moment Score.vi"/>
+			<Item Name="Normalize Score.vi" Type="VI" URL="../Vision Support Code/Normalize Score.vi"/>
+			<Item Name="Area Scoring.vi" Type="VI" URL="../Vision Support Code/Area Scoring.vi"/>
+			<Item Name="Aspect Ratio Score 2016.vi" Type="VI" URL="../Vision Support Code/Aspect Ratio Score 2016.vi"/>
+			<Item Name="Normalized Range Compare 2016.vi" Type="VI" URL="../Vision Support Code/Normalized Range Compare 2016.vi"/>
+			<Item Name="Normalize Coordinates.vi" Type="VI" URL="../Vision Support Code/Normalize Coordinates.vi"/>
+			<Item Name="Calibration Helper2.vi" Type="VI" URL="../Vision Support Code/Calibration Helper2.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC_Dashboard" Type="EXE">
