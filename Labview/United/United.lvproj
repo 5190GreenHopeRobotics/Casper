@@ -175,6 +175,13 @@ AddOutputFilter chunkFilter
 			<Item Name="Lidar Open.vi" Type="VI" URL="../Lidar/Lidar Open.vi"/>
 			<Item Name="Lidar Type Def.ctl" Type="VI" URL="../Lidar/Lidar Type Def.ctl"/>
 		</Item>
+		<Item Name="Solenoids" Type="Folder">
+			<Item Name="Set Solenoid.vi" Type="VI" URL="../Solenoids/Set Solenoid.vi"/>
+			<Item Name="Solenoid Global.vi" Type="VI" URL="../Solenoids/Solenoid Global.vi"/>
+			<Item Name="Solenoids.ctl" Type="VI" URL="../Solenoids/Solenoids.ctl"/>
+			<Item Name="Solenoid Type Def.ctl" Type="VI" URL="../Solenoids/Solenoid Type Def.ctl"/>
+			<Item Name="InitSolenoids.vi" Type="VI" URL="../Solenoids/InitSolenoids.vi"/>
+		</Item>
 		<Item Name="Gear" Type="Folder">
 			<Item Name="Commands" Type="Folder">
 				<Item Name="Change Gear.vi" Type="VI" URL="../Gear/Commands/Change Gear.vi"/>
@@ -196,13 +203,6 @@ AddOutputFilter chunkFilter
 				<Item Name="Gear Setpoints.ctl" Type="VI" URL="../Gear/Implementation/Gear Setpoints.ctl"/>
 				<Item Name="Gear.ctl" Type="VI" URL="../Gear/Implementation/Gear.ctl"/>
 			</Item>
-		</Item>
-		<Item Name="Solenoids" Type="Folder">
-			<Item Name="Set Solenoid.vi" Type="VI" URL="../Solenoids/Set Solenoid.vi"/>
-			<Item Name="Solenoid Global.vi" Type="VI" URL="../Solenoids/Solenoid Global.vi"/>
-			<Item Name="Solenoids.ctl" Type="VI" URL="../Solenoids/Solenoids.ctl"/>
-			<Item Name="Solenoid Type Def.ctl" Type="VI" URL="../Solenoids/Solenoid Type Def.ctl"/>
-			<Item Name="InitSolenoids.vi" Type="VI" URL="../Solenoids/InitSolenoids.vi"/>
 		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
@@ -766,6 +766,7 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_Joystick Info.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_Joystick Info.ctl"/>
 				<Item Name="WPI_JoystickGetInfo.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickGetInfo.vi"/>
 				<Item Name="WPI_CANTalonSRX_ConfigSoftLimits.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigSoftLimits.vi"/>
+				<Item Name="WPI_CANTalonSRX_ConfigEnabledLimits.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigEnabledLimits.vi"/>
 			</Item>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -812,7 +813,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D2136F65-FD06-4AC9-A317-10E44B9EF7A4}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">27</Property>
+				<Property Name="Bld_version.build" Type="Int">29</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
