@@ -167,9 +167,6 @@ AddOutputFilter chunkFilter
 			<Item Name="TestAngleTeleOp.vi" Type="VI" URL="../TeleOp/TestAngleTeleOp.vi"/>
 			<Item Name="IntakeTeleOp.vi" Type="VI" URL="../TeleOp/IntakeTeleOp.vi"/>
 		</Item>
-		<Item Name="PortC" Type="Folder" URL="../PortC">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
 		<Item Name="Lidar" Type="Folder">
 			<Item Name="Lidar Read.vi" Type="VI" URL="../Lidar/Lidar Read.vi"/>
 			<Item Name="Lidar Open.vi" Type="VI" URL="../Lidar/Lidar Open.vi"/>
@@ -203,6 +200,9 @@ AddOutputFilter chunkFilter
 				<Item Name="Gear Setpoints.ctl" Type="VI" URL="../Gear/Implementation/Gear Setpoints.ctl"/>
 				<Item Name="Gear.ctl" Type="VI" URL="../Gear/Implementation/Gear.ctl"/>
 			</Item>
+		</Item>
+		<Item Name="Port" Type="Folder">
+			<Item Name="SetPortArmAngle.vi" Type="VI" URL="../Port/SetPortArmAngle.vi"/>
 		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
