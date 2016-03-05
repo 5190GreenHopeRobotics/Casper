@@ -163,6 +163,30 @@ AddOutputFilter chunkFilter
 			<Item Name="LED Light Set Color Range.vi" Type="VI" URL="../LED Lights/LED Light Set Color Range.vi"/>
 		</Item>
 		<Item Name="NavX" Type="Folder">
+			<Item Name="Library" Type="Folder">
+				<Item Name="Get" Type="Folder">
+					<Item Name="Raw Values" Type="Folder"/>
+					<Item Name="System Information" Type="Folder"/>
+				</Item>
+				<Item Name="IO" Type="Folder">
+					<Item Name="Internal" Type="Folder">
+						<Item Name="SERIAL" Type="Folder"/>
+						<Item Name="SPI" Type="Folder"/>
+					</Item>
+					<Item Name="Open" Type="Folder"/>
+				</Item>
+				<Item Name="RefNum" Type="Folder"/>
+				<Item Name="Set" Type="Folder"/>
+				<Item Name="TypeDefs" Type="Folder">
+					<Item Name="Flags" Type="Folder"/>
+					<Item Name="navX Open TypeDefs" Type="Folder"/>
+					<Item Name="Z900_navX_UpdateRateTypeDef.ctl" Type="VI" URL="../NavX/Library/TypeDefs/Z900_navX_UpdateRateTypeDef.ctl"/>
+				</Item>
+				<Item Name="Util" Type="Folder">
+					<Item Name="Decode Protocol" Type="Folder"/>
+					<Item Name="Encode Protocol" Type="Folder"/>
+				</Item>
+			</Item>
 			<Item Name="NavX.vi" Type="VI" URL="../NavX/NavX.vi"/>
 			<Item Name="NavX Global.vi" Type="VI" URL="../NavX/NavX Global.vi"/>
 		</Item>
@@ -182,6 +206,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
 			<Item Name="TestAngleTeleOp.vi" Type="VI" URL="../TeleOp/TestAngleTeleOp.vi"/>
 			<Item Name="IntakeTeleOp.vi" Type="VI" URL="../TeleOp/IntakeTeleOp.vi"/>
+			<Item Name="JoystickSmoth.vi" Type="VI" URL="../TeleOp/JoystickSmoth.vi"/>
 		</Item>
 		<Item Name="Lidar" Type="Folder">
 			<Item Name="Lidar Read.vi" Type="VI" URL="../Lidar/Lidar Read.vi"/>
@@ -230,6 +255,7 @@ AddOutputFilter chunkFilter
 		<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
 		<Item Name="SubSystems.vi" Type="VI" URL="../SubSystems.vi"/>
 		<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
+		<Item Name="TeleopDrive.vi" Type="VI" URL="../TeleOp/TeleopDrive.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -783,6 +809,8 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_JoystickGetInfo.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickGetInfo.vi"/>
 				<Item Name="WPI_CANTalonSRX_ConfigSoftLimits.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigSoftLimits.vi"/>
 				<Item Name="WPI_CANTalonSRX_ConfigEnabledLimits.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigEnabledLimits.vi"/>
+				<Item Name="WPI_SerialPort.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/SerialPort/WPI_SerialPort.ctl"/>
+				<Item Name="WPI_SerialPortOpen.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/SerialPort/WPI_SerialPortOpen.vi"/>
 			</Item>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -810,7 +838,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Aspect Ratio Score 2016.vi" Type="VI" URL="../Vision Support Code/Aspect Ratio Score 2016.vi"/>
 			<Item Name="Area Scoring.vi" Type="VI" URL="../Vision Support Code/Area Scoring.vi"/>
 			<Item Name="Moment Score.vi" Type="VI" URL="../Vision Support Code/Moment Score.vi"/>
-			<Item Name="navX-MXP IMU.lvlib" Type="Library" URL="../../Z-Old Code/navx-mxp/labview/navX-MXP Library/navX-MXP IMU.lvlib"/>
+			<Item Name="navX Library v2.lvlib" Type="Library" URL="../NavX/Library/navX Library v2.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
