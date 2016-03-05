@@ -111,6 +111,25 @@ AddOutputFilter chunkFilter
 		<Property Name="target.WebServer.ViAccess" Type="Str">+*</Property>
 		<Property Name="target.webservices.SecurityAPIKey" Type="Str">PqVr/ifkAQh+lVrdPIykXlFvg12GhhQFR8H9cUhphgg=:pTe9HRlQuMfJxAG6QCGq7UvoUpJzAzWGKy5SbZ+roSU=</Property>
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
+		<Item Name="Framework" Type="Folder">
+			<Item Name="Type Defs" Type="Folder">
+				<Item Name="Robot Type Def.ctl" Type="VI" URL="../Robot Type Def.ctl"/>
+				<Item Name="Addon Motor Type Def.ctl" Type="VI" URL="../Framework/Addon Motor Type Def.ctl"/>
+				<Item Name="Detailed Motor Type Def.ctl" Type="VI" URL="../Framework/Detailed Motor Type Def.ctl"/>
+				<Item Name="JoystickMap.ctl" Type="VI" URL="../Framework/JoystickMap.ctl"/>
+				<Item Name="JoystickMapping.ctl" Type="VI" URL="../Framework/JoystickMapping.ctl"/>
+				<Item Name="JoystickMappingNamesTypeDef.ctl" Type="VI" URL="../Framework/JoystickMappingNamesTypeDef.ctl"/>
+				<Item Name="Motor Ref Array Type Def.ctl" Type="VI" URL="../Framework/Motor Ref Array Type Def.ctl"/>
+				<Item Name="Motor Ref Names Type Def.ctl" Type="VI" URL="../Framework/Motor Ref Names Type Def.ctl"/>
+			</Item>
+			<Item Name="Begin.vi" Type="VI" URL="../Framework/Begin.vi"/>
+			<Item Name="Disabled.vi" Type="VI" URL="../Framework/Disabled.vi"/>
+			<Item Name="Finish.vi" Type="VI" URL="../Framework/Finish.vi"/>
+			<Item Name="LoadValuesFromDash.vi" Type="VI" URL="../Framework/LoadValuesFromDash.vi"/>
+			<Item Name="MapJoystick.vi" Type="VI" URL="../Framework/MapJoystick.vi"/>
+			<Item Name="Periodic Tasks.vi" Type="VI" URL="../Framework/Periodic Tasks.vi"/>
+			<Item Name="Robot Global Data.vi" Type="VI" URL="../Framework/Robot Global Data.vi"/>
+		</Item>
 		<Item Name="Lift" Type="Folder">
 			<Item Name="InitMotor.vi" Type="VI" URL="../Lift/InitMotor.vi"/>
 			<Item Name="MoveLiftIncre.vi" Type="VI" URL="../Lift/MoveLiftIncre.vi"/>
@@ -120,9 +139,6 @@ AddOutputFilter chunkFilter
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Drive" Type="Folder" URL="../Drive">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
-		<Item Name="Framework" Type="Folder" URL="../Framework">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Support Code" Type="Folder" URL="../Support Code">
@@ -178,6 +194,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Solenoids.ctl" Type="VI" URL="../Solenoids/Solenoids.ctl"/>
 			<Item Name="Solenoid Type Def.ctl" Type="VI" URL="../Solenoids/Solenoid Type Def.ctl"/>
 			<Item Name="InitSolenoids.vi" Type="VI" URL="../Solenoids/InitSolenoids.vi"/>
+			<Item Name="Update Solenoids.vi" Type="VI" URL="../Solenoids/Update Solenoids.vi"/>
 		</Item>
 		<Item Name="Gear" Type="Folder">
 			<Item Name="Commands" Type="Folder">
@@ -203,13 +220,15 @@ AddOutputFilter chunkFilter
 		</Item>
 		<Item Name="Port" Type="Folder">
 			<Item Name="SetPortArmAngle.vi" Type="VI" URL="../Port/SetPortArmAngle.vi"/>
+			<Item Name="PortC Arm Settings Type Def.ctl" Type="VI" URL="../Port/PortC Arm Settings Type Def.ctl"/>
+			<Item Name="CalculatePercentTicks.vi" Type="VI" URL="../Port/CalculatePercentTicks.vi"/>
+			<Item Name="MovePortToStart.vi" Type="VI" URL="../Port/MovePortToStart.vi"/>
+			<Item Name="MovePortToEnd.vi" Type="VI" URL="../Port/MovePortToEnd.vi"/>
+			<Item Name="SetPortArmPercent.vi" Type="VI" URL="../Port/SetPortArmPercent.vi"/>
 		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
 		<Item Name="SubSystems.vi" Type="VI" URL="../SubSystems.vi"/>
-		<Item Name="Prefrences.vi" Type="VI" URL="../Prefrences.vi"/>
-		<Item Name="Robot Type Def.ctl" Type="VI" URL="../Robot Type Def.ctl"/>
-		<Item Name="Update Solenoids.vi" Type="VI" URL="../Solenoids/Update Solenoids.vi"/>
 		<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -477,7 +496,6 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_ERRPwmChannelAllocated.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/PWM/WPI_ERRPwmChannelAllocated.vi"/>
 				<Item Name="WPI_GetSetVariantRefNum.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Utilities/WPI_GetSetVariantRefNum.vi"/>
 				<Item Name="WPI_JoystickArcadeMapping.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickArcadeMapping.vi"/>
-				<Item Name="WPI_JoystickClose.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickClose.vi"/>
 				<Item Name="WPI_JoystickDeviceEnum.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickDeviceEnum.ctl"/>
 				<Item Name="WPI_JoystickDevRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickDevRef.ctl"/>
 				<Item Name="WPI_MotorControlDeviceRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/MotorControl/WPI_MotorControlDeviceRef.ctl"/>
@@ -723,7 +741,6 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_SwitchOpenLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Switch/WPI_SwitchOpenLimit.vi"/>
 				<Item Name="WPI_SwitchOpen.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Switch/WPI_SwitchOpen.vi"/>
 				<Item Name="WPI_JoystickOpen.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickOpen.vi"/>
-				<Item Name="WPI_JoystickRefNum Registry Set.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickRefNum Registry Set.vi"/>
 				<Item Name="WPI_CANTalonSRX_ChangeMode.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ChangeMode.vi"/>
 				<Item Name="NI_PID__prctrl compat.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID__prctrl compat.lvlib"/>
 				<Item Name="NI_PID_pid.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID_pid.lvlib"/>
