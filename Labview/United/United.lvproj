@@ -122,8 +122,21 @@ AddOutputFilter chunkFilter
 		<Item Name="Drive" Type="Folder" URL="../Drive">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Framework" Type="Folder" URL="../Framework">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="Framework" Type="Folder">
+			<Item Name="Addon Motor Type Def.ctl" Type="VI" URL="../Framework/Addon Motor Type Def.ctl"/>
+			<Item Name="Begin.vi" Type="VI" URL="../Framework/Begin.vi"/>
+			<Item Name="Detailed Motor Type Def.ctl" Type="VI" URL="../Framework/Detailed Motor Type Def.ctl"/>
+			<Item Name="Disabled.vi" Type="VI" URL="../Framework/Disabled.vi"/>
+			<Item Name="Finish.vi" Type="VI" URL="../Framework/Finish.vi"/>
+			<Item Name="JoystickMap.ctl" Type="VI" URL="../Framework/JoystickMap.ctl"/>
+			<Item Name="JoystickMapping.ctl" Type="VI" URL="../Framework/JoystickMapping.ctl"/>
+			<Item Name="JoystickMappingNamesTypeDef.ctl" Type="VI" URL="../Framework/JoystickMappingNamesTypeDef.ctl"/>
+			<Item Name="LoadValuesFromDash.vi" Type="VI" URL="../Framework/LoadValuesFromDash.vi"/>
+			<Item Name="MapJoystick.vi" Type="VI" URL="../Framework/MapJoystick.vi"/>
+			<Item Name="Motor Ref Array Type Def.ctl" Type="VI" URL="../Framework/Motor Ref Array Type Def.ctl"/>
+			<Item Name="Motor Ref Names Type Def.ctl" Type="VI" URL="../Framework/Motor Ref Names Type Def.ctl"/>
+			<Item Name="Periodic Tasks.vi" Type="VI" URL="../Framework/Periodic Tasks.vi"/>
+			<Item Name="Robot Global Data.vi" Type="VI" URL="../Framework/Robot Global Data.vi"/>
 		</Item>
 		<Item Name="Support Code" Type="Folder" URL="../Support Code">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -203,6 +216,9 @@ AddOutputFilter chunkFilter
 		</Item>
 		<Item Name="Port" Type="Folder">
 			<Item Name="SetPortArmAngle.vi" Type="VI" URL="../Port/SetPortArmAngle.vi"/>
+		</Item>
+		<Item Name="Arm" Type="Folder">
+			<Item Name="InitArm.vi" Type="VI" URL="../Framework/InitArm.vi"/>
 		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
