@@ -113,6 +113,7 @@ AddOutputFilter chunkFilter
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
 		<Item Name="Lift" Type="Folder">
 			<Item Name="InitMotor.vi" Type="VI" URL="../Lift/InitMotor.vi"/>
+			<Item Name="Lift Motor.vi" Type="VI" URL="../Lift/Lift Motor.vi"/>
 			<Item Name="MoveLiftIncre.vi" Type="VI" URL="../Lift/MoveLiftIncre.vi"/>
 			<Item Name="MoveLiftToDistance.vi" Type="VI" URL="../Lift/MoveLiftToDistance.vi"/>
 		</Item>
@@ -123,18 +124,20 @@ AddOutputFilter chunkFilter
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Framework" Type="Folder">
-			<Item Name="Addon Motor Type Def.ctl" Type="VI" URL="../Framework/Addon Motor Type Def.ctl"/>
+			<Item Name="Type Defs" Type="Folder">
+				<Item Name="Motor Ref Array Type Def.ctl" Type="VI" URL="../Framework/Motor Ref Array Type Def.ctl"/>
+				<Item Name="Motor Ref Names Type Def.ctl" Type="VI" URL="../Framework/Motor Ref Names Type Def.ctl"/>
+				<Item Name="Addon Motor Type Def.ctl" Type="VI" URL="../Framework/Addon Motor Type Def.ctl"/>
+				<Item Name="Detailed Motor Type Def.ctl" Type="VI" URL="../Framework/Detailed Motor Type Def.ctl"/>
+				<Item Name="JoystickMap.ctl" Type="VI" URL="../Framework/JoystickMap.ctl"/>
+				<Item Name="JoystickMapping.ctl" Type="VI" URL="../Framework/JoystickMapping.ctl"/>
+				<Item Name="JoystickMappingNamesTypeDef.ctl" Type="VI" URL="../Framework/JoystickMappingNamesTypeDef.ctl"/>
+			</Item>
 			<Item Name="Begin.vi" Type="VI" URL="../Framework/Begin.vi"/>
-			<Item Name="Detailed Motor Type Def.ctl" Type="VI" URL="../Framework/Detailed Motor Type Def.ctl"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../Framework/Disabled.vi"/>
 			<Item Name="Finish.vi" Type="VI" URL="../Framework/Finish.vi"/>
-			<Item Name="JoystickMap.ctl" Type="VI" URL="../Framework/JoystickMap.ctl"/>
-			<Item Name="JoystickMapping.ctl" Type="VI" URL="../Framework/JoystickMapping.ctl"/>
-			<Item Name="JoystickMappingNamesTypeDef.ctl" Type="VI" URL="../Framework/JoystickMappingNamesTypeDef.ctl"/>
 			<Item Name="LoadValuesFromDash.vi" Type="VI" URL="../Framework/LoadValuesFromDash.vi"/>
 			<Item Name="MapJoystick.vi" Type="VI" URL="../Framework/MapJoystick.vi"/>
-			<Item Name="Motor Ref Array Type Def.ctl" Type="VI" URL="../Framework/Motor Ref Array Type Def.ctl"/>
-			<Item Name="Motor Ref Names Type Def.ctl" Type="VI" URL="../Framework/Motor Ref Names Type Def.ctl"/>
 			<Item Name="Periodic Tasks.vi" Type="VI" URL="../Framework/Periodic Tasks.vi"/>
 			<Item Name="Robot Global Data.vi" Type="VI" URL="../Framework/Robot Global Data.vi"/>
 		</Item>
