@@ -169,8 +169,32 @@ AddOutputFilter chunkFilter
 			<Item Name="RWC_Actions.ctl" Type="VI" URL="../../Load and Save Controls_LV2009.llb/RWC_Actions.ctl"/>
 			<Item Name="Read and Write Controls to File.vi" Type="VI" URL="../Read and Write Controls to File.vi"/>
 		</Item>
-		<Item Name="LowShooter" Type="Folder" URL="../LowShooter">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
+		<Item Name="LowShooter" Type="Folder">
+			<Item Name="Commands" Type="Folder">
+				<Item Name="LowShooter Immediate.vi" Type="VI" URL="../LowShooter/Commands/LowShooter Immediate.vi"/>
+				<Item Name="Move Arm to Start Position.vi" Type="VI" URL="../LowShooter/Commands/Move Arm to Start Position.vi"/>
+				<Item Name="Move Arm.vi" Type="VI" URL="../LowShooter/Commands/Move Arm.vi"/>
+				<Item Name="Read LowShooter Operation.vi" Type="VI" URL="../LowShooter/Commands/Read LowShooter Operation.vi"/>
+				<Item Name="Reserve LowShooter.vi" Type="VI" URL="../LowShooter/Commands/Reserve LowShooter.vi"/>
+				<Item Name="Retrieve.vi" Type="VI" URL="../LowShooter/Commands/Retrieve.vi"/>
+				<Item Name="Shoot.vi" Type="VI" URL="../LowShooter/Commands/Shoot.vi"/>
+				<Item Name="Template for LowShooter Immediate with Deadband.vit" Type="VI" URL="../LowShooter/Commands/Template for LowShooter Immediate with Deadband.vit"/>
+				<Item Name="Template for LowShooter Immediate.vit" Type="VI" URL="../LowShooter/Commands/Template for LowShooter Immediate.vit"/>
+				<Item Name="Template for LowShooter with Duration.vit" Type="VI" URL="../LowShooter/Commands/Template for LowShooter with Duration.vit"/>
+			</Item>
+			<Item Name="Implementation" Type="Folder">
+				<Item Name="Infrastructure" Type="Folder">
+					<Item Name="LowShooter Check for New Command.vi" Type="VI" URL="../LowShooter/Implementation/Infrastructure/LowShooter Check for New Command.vi"/>
+					<Item Name="LowShooter Command Helper.vi" Type="VI" URL="../LowShooter/Implementation/Infrastructure/LowShooter Command Helper.vi"/>
+					<Item Name="LowShooter Controller Initialization.vi" Type="VI" URL="../LowShooter/Implementation/Infrastructure/LowShooter Controller Initialization.vi"/>
+				</Item>
+				<Item Name="LowShooter Controller.vi" Type="VI" URL="../LowShooter/Implementation/LowShooter Controller.vi"/>
+				<Item Name="LowShooter Operations.ctl" Type="VI" URL="../LowShooter/Implementation/LowShooter Operations.ctl"/>
+				<Item Name="LowShooter Published Globals.vi" Type="VI" URL="../LowShooter/Implementation/LowShooter Published Globals.vi"/>
+				<Item Name="LowShooter Setpoints.ctl" Type="VI" URL="../LowShooter/Implementation/LowShooter Setpoints.ctl"/>
+				<Item Name="Shooter Global.vi" Type="VI" URL="../LowShooter/Implementation/Shooter Global.vi"/>
+				<Item Name="Shooter Settings Type Def.ctl" Type="VI" URL="../LowShooter/Implementation/Shooter Settings Type Def.ctl"/>
+			</Item>
 		</Item>
 		<Item Name="AddonMotors" Type="Folder" URL="../AddonMotors">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -215,7 +239,13 @@ AddOutputFilter chunkFilter
 			</Item>
 		</Item>
 		<Item Name="Port" Type="Folder">
+			<Item Name="PortC Global.vi" Type="VI" URL="../Port/PortC Global.vi"/>
+			<Item Name="PortC Settings Type Def.ctl" Type="VI" URL="../Port/PortC Settings Type Def.ctl"/>
 			<Item Name="SetPortArmAngle.vi" Type="VI" URL="../Port/SetPortArmAngle.vi"/>
+			<Item Name="SetPortArmTicks.vi" Type="VI" URL="../Port/SetPortArmTicks.vi"/>
+			<Item Name="MovePortC.vi" Type="VI" URL="../Port/MovePortC.vi"/>
+			<Item Name="CropPortPos.vi" Type="VI" URL="../Port/CropPortPos.vi"/>
+			<Item Name="InitPortC.vi" Type="VI" URL="../Port/InitPortC.vi"/>
 		</Item>
 		<Item Name="Arm" Type="Folder">
 			<Item Name="InitArm.vi" Type="VI" URL="../Framework/InitArm.vi"/>
@@ -496,7 +526,6 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_ERRPwmChannelAllocated.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/PWM/WPI_ERRPwmChannelAllocated.vi"/>
 				<Item Name="WPI_GetSetVariantRefNum.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Utilities/WPI_GetSetVariantRefNum.vi"/>
 				<Item Name="WPI_JoystickArcadeMapping.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickArcadeMapping.vi"/>
-				<Item Name="WPI_JoystickClose.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickClose.vi"/>
 				<Item Name="WPI_JoystickDeviceEnum.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickDeviceEnum.ctl"/>
 				<Item Name="WPI_JoystickDevRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickDevRef.ctl"/>
 				<Item Name="WPI_MotorControlDeviceRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/MotorControl/WPI_MotorControlDeviceRef.ctl"/>
@@ -742,7 +771,6 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_SwitchOpenLimit.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Switch/WPI_SwitchOpenLimit.vi"/>
 				<Item Name="WPI_SwitchOpen.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Switch/WPI_SwitchOpen.vi"/>
 				<Item Name="WPI_JoystickOpen.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickOpen.vi"/>
-				<Item Name="WPI_JoystickRefNum Registry Set.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickRefNum Registry Set.vi"/>
 				<Item Name="WPI_CANTalonSRX_ChangeMode.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ChangeMode.vi"/>
 				<Item Name="NI_PID__prctrl compat.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID__prctrl compat.lvlib"/>
 				<Item Name="NI_PID_pid.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID_pid.lvlib"/>
@@ -777,8 +805,6 @@ AddOutputFilter chunkFilter
 				<Item Name="NetComm_getJoystickButtons.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_getJoystickButtons.vi"/>
 				<Item Name="NetComm_getJoystickAxes.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_getJoystickAxes.vi"/>
 				<Item Name="WPI_JoystickGetValues.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickGetValues.vi"/>
-				<Item Name="WPI_CANTalonSRX_ConfigSoftLimits.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigSoftLimits.vi"/>
-				<Item Name="WPI_CANTalonSRX_ConfigEnabledLimits.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/TalonSRX/WPI_CANTalonSRX_ConfigEnabledLimits.vi"/>
 			</Item>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -807,6 +833,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Area Scoring.vi" Type="VI" URL="../Vision Support Code/Area Scoring.vi"/>
 			<Item Name="Moment Score.vi" Type="VI" URL="../Vision Support Code/Moment Score.vi"/>
 			<Item Name="navX-MXP IMU.lvlib" Type="Library" URL="../../Z-Old Code/navx-mxp/labview/navX-MXP Library/navX-MXP IMU.lvlib"/>
+			<Item Name="SoftLimitBlockers.vi" Type="VI" URL="../LowShooter/Implementation/SoftLimitBlockers.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
