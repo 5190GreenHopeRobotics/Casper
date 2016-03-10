@@ -116,6 +116,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Lift Motor.vi" Type="VI" URL="../Lift/Lift Motor.vi"/>
 			<Item Name="MoveLiftIncre.vi" Type="VI" URL="../Lift/MoveLiftIncre.vi"/>
 			<Item Name="MoveLiftToDistance.vi" Type="VI" URL="../Lift/MoveLiftToDistance.vi"/>
+			<Item Name="CropLiftPos.vi" Type="VI" URL="../Lift/CropLiftPos.vi"/>
 		</Item>
 		<Item Name="data" Type="Folder" URL="../data">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -243,11 +244,11 @@ AddOutputFilter chunkFilter
 		</Item>
 		<Item Name="Port" Type="Folder">
 			<Item Name="PortC Global.vi" Type="VI" URL="../Port/PortC Global.vi"/>
+			<Item Name="CropPortPos.vi" Type="VI" URL="../Port/CropPortPos.vi"/>
 			<Item Name="PortC Settings Type Def.ctl" Type="VI" URL="../Port/PortC Settings Type Def.ctl"/>
 			<Item Name="SetPortArmAngle.vi" Type="VI" URL="../Port/SetPortArmAngle.vi"/>
 			<Item Name="SetPortArmTicks.vi" Type="VI" URL="../Port/SetPortArmTicks.vi"/>
 			<Item Name="MovePortC.vi" Type="VI" URL="../Port/MovePortC.vi"/>
-			<Item Name="CropPortPos.vi" Type="VI" URL="../Port/CropPortPos.vi"/>
 			<Item Name="InitPortC.vi" Type="VI" URL="../Port/InitPortC.vi"/>
 		</Item>
 		<Item Name="Arm" Type="Folder">
@@ -855,7 +856,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D2136F65-FD06-4AC9-A317-10E44B9EF7A4}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">29</Property>
+				<Property Name="Bld_version.build" Type="Int">31</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
