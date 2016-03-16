@@ -32,7 +32,7 @@
 	</Item>
 	<Item Name="Target" Type="RT myRIO">
 		<Property Name="alias.name" Type="Str">Target</Property>
-		<Property Name="alias.value" Type="Str">10.51.90.2</Property>
+		<Property Name="alias.value" Type="Str">roboRIO-5190-FRC.local</Property>
 		<Property Name="CCSymbols" Type="Str">TARGET_TYPE,RT;OS,Linux;CPU,ARM;DeviceCode,76F2;</Property>
 		<Property Name="crio.ControllerPID" Type="Str">76F2</Property>
 		<Property Name="crio.family" Type="Str">ARMLinux</Property>
@@ -166,6 +166,7 @@ AddOutputFilter chunkFilter
 		<Item Name="NavX" Type="Folder">
 			<Item Name="NavX.vi" Type="VI" URL="../NavX/NavX.vi"/>
 			<Item Name="NavX Global.vi" Type="VI" URL="../NavX/NavX Global.vi"/>
+			<Item Name="navX Library v2.lvlib" Type="Library" URL="../NavX/Library/navX Library v2.lvlib"/>
 		</Item>
 		<Item Name="Save and Load Controls" Type="Folder">
 			<Item Name="Read and Write Controls to Automatic Config File.vi" Type="VI" URL="../../Load and Save Controls_LV2009.llb/Read and Write Controls to Automatic Config File.vi"/>
@@ -259,11 +260,11 @@ AddOutputFilter chunkFilter
 		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
-		<Item Name="SubSystems.vi" Type="VI" URL="../SubSystems.vi"/>
 		<Item Name="Prefrences.vi" Type="VI" URL="../Prefrences.vi"/>
 		<Item Name="Robot Type Def.ctl" Type="VI" URL="../Robot Type Def.ctl"/>
 		<Item Name="Update Solenoids.vi" Type="VI" URL="../Solenoids/Update Solenoids.vi"/>
 		<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
+		<Item Name="SubSystems.vi" Type="VI" URL="../SubSystems.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -836,8 +837,8 @@ AddOutputFilter chunkFilter
 			<Item Name="Aspect Ratio Score 2016.vi" Type="VI" URL="../Vision Support Code/Aspect Ratio Score 2016.vi"/>
 			<Item Name="Area Scoring.vi" Type="VI" URL="../Vision Support Code/Area Scoring.vi"/>
 			<Item Name="Moment Score.vi" Type="VI" URL="../Vision Support Code/Moment Score.vi"/>
-			<Item Name="navX-MXP IMU.lvlib" Type="Library" URL="../../Z-Old Code/navx-mxp/labview/navX-MXP Library/navX-MXP IMU.lvlib"/>
 			<Item Name="SoftLimitBlockers.vi" Type="VI" URL="../LowShooter/Implementation/SoftLimitBlockers.vi"/>
+			<Item Name="NI WPI Serial USB.lvlib" Type="Library" URL="../../../../../Users/Ryan/navx-mxp/labview/NI WPI/NI WPI Serial USB.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
@@ -856,7 +857,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D2136F65-FD06-4AC9-A317-10E44B9EF7A4}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">31</Property>
+				<Property Name="Bld_version.build" Type="Int">45</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
