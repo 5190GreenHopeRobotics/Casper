@@ -111,12 +111,18 @@ AddOutputFilter chunkFilter
 		<Property Name="target.WebServer.ViAccess" Type="Str">+*</Property>
 		<Property Name="target.webservices.SecurityAPIKey" Type="Str">PqVr/ifkAQh+lVrdPIykXlFvg12GhhQFR8H9cUhphgg=:pTe9HRlQuMfJxAG6QCGq7UvoUpJzAzWGKy5SbZ+roSU=</Property>
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
-		<Item Name="Lift" Type="Folder">
-			<Item Name="InitMotor.vi" Type="VI" URL="../Lift/InitMotor.vi"/>
-			<Item Name="Lift Motor.vi" Type="VI" URL="../Lift/Lift Motor.vi"/>
-			<Item Name="MoveLiftIncre.vi" Type="VI" URL="../Lift/MoveLiftIncre.vi"/>
-			<Item Name="MoveLiftToDistance.vi" Type="VI" URL="../Lift/MoveLiftToDistance.vi"/>
-			<Item Name="CropLiftPos.vi" Type="VI" URL="../Lift/CropLiftPos.vi"/>
+		<Item Name="Tape Winch" Type="Folder">
+			<Item Name="Tape" Type="Folder">
+				<Item Name="InitMotor.vi" Type="VI" URL="../Lift/InitMotor.vi"/>
+				<Item Name="MoveLiftIncre.vi" Type="VI" URL="../Lift/MoveLiftIncre.vi"/>
+				<Item Name="MoveLiftToDistance.vi" Type="VI" URL="../Lift/MoveLiftToDistance.vi"/>
+				<Item Name="CropLiftPos.vi" Type="VI" URL="../Lift/CropLiftPos.vi"/>
+			</Item>
+			<Item Name="TW" Type="Folder">
+				<Item Name="InitTWMotor.vi" Type="VI" URL="../Lift/InitTWMotor.vi"/>
+				<Item Name="MoveTW.vi" Type="VI" URL="../Lift/MoveTW.vi"/>
+			</Item>
+			<Item Name="TW Global.vi" Type="VI" URL="../Lift/TW Global.vi"/>
 		</Item>
 		<Item Name="data" Type="Folder" URL="../data">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -205,9 +211,18 @@ AddOutputFilter chunkFilter
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="TeleOp" Type="Folder">
+			<Item Name="PTOTeleOp.vi" Type="VI" URL="../TeleOp/PTOTeleOp.vi"/>
+			<Item Name="PortCTeleOp.vi" Type="VI" URL="../TeleOp/PortCTeleOp.vi"/>
+			<Item Name="TapeTeleOp.vi" Type="VI" URL="../TeleOp/TapeTeleOp.vi"/>
+			<Item Name="DriveTeleOp.vi" Type="VI" URL="../TeleOp/DriveTeleOp.vi"/>
+			<Item Name="GhostShoot.vi" Type="VI" URL="../TeleOp/GhostShoot.vi"/>
+			<Item Name="ArmControlTeleOp.vi" Type="VI" URL="../TeleOp/ArmControlTeleOp.vi"/>
 			<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
 			<Item Name="TestAngleTeleOp.vi" Type="VI" URL="../TeleOp/TestAngleTeleOp.vi"/>
 			<Item Name="IntakeTeleOp.vi" Type="VI" URL="../TeleOp/IntakeTeleOp.vi"/>
+			<Item Name="GearTeleOp.vi" Type="VI" URL="../TeleOp/GearTeleOp.vi"/>
+			<Item Name="ShootTeleOp.vi" Type="VI" URL="../TeleOp/ShootTeleOp.vi"/>
+			<Item Name="TWPivotTeleOp.vi" Type="VI" URL="../TeleOp/TWPivotTeleOp.vi"/>
 		</Item>
 		<Item Name="Lidar" Type="Folder">
 			<Item Name="Lidar Read.vi" Type="VI" URL="../Lidar/Lidar Read.vi"/>
@@ -220,28 +235,11 @@ AddOutputFilter chunkFilter
 			<Item Name="Solenoids.ctl" Type="VI" URL="../Solenoids/Solenoids.ctl"/>
 			<Item Name="Solenoid Type Def.ctl" Type="VI" URL="../Solenoids/Solenoid Type Def.ctl"/>
 			<Item Name="InitSolenoids.vi" Type="VI" URL="../Solenoids/InitSolenoids.vi"/>
+			<Item Name="Update Solenoids.vi" Type="VI" URL="../Solenoids/Update Solenoids.vi"/>
 		</Item>
 		<Item Name="Gear" Type="Folder">
-			<Item Name="Commands" Type="Folder">
-				<Item Name="Change Gear.vi" Type="VI" URL="../Gear/Commands/Change Gear.vi"/>
-				<Item Name="Read Gear Operation.vi" Type="VI" URL="../Gear/Commands/Read Gear Operation.vi"/>
-				<Item Name="Reserve Gear.vi" Type="VI" URL="../Gear/Commands/Reserve Gear.vi"/>
-				<Item Name="Template for Gear Immediate with Deadband.vit" Type="VI" URL="../Gear/Commands/Template for Gear Immediate with Deadband.vit"/>
-				<Item Name="Template for Gear Immediate.vit" Type="VI" URL="../Gear/Commands/Template for Gear Immediate.vit"/>
-				<Item Name="Template for Gear with Duration.vit" Type="VI" URL="../Gear/Commands/Template for Gear with Duration.vit"/>
-			</Item>
-			<Item Name="Implementation" Type="Folder">
-				<Item Name="Infrastructure" Type="Folder">
-					<Item Name="Gear Check for New Command.vi" Type="VI" URL="../Gear/Implementation/Infrastructure/Gear Check for New Command.vi"/>
-					<Item Name="Gear Command Helper.vi" Type="VI" URL="../Gear/Implementation/Infrastructure/Gear Command Helper.vi"/>
-					<Item Name="Gear Controller Initialization.vi" Type="VI" URL="../Gear/Implementation/Infrastructure/Gear Controller Initialization.vi"/>
-				</Item>
-				<Item Name="Gear Controller.vi" Type="VI" URL="../Gear/Implementation/Gear Controller.vi"/>
-				<Item Name="Gear Operations.ctl" Type="VI" URL="../Gear/Implementation/Gear Operations.ctl"/>
-				<Item Name="Gear Published Globals.vi" Type="VI" URL="../Gear/Implementation/Gear Published Globals.vi"/>
-				<Item Name="Gear Setpoints.ctl" Type="VI" URL="../Gear/Implementation/Gear Setpoints.ctl"/>
-				<Item Name="Gear.ctl" Type="VI" URL="../Gear/Implementation/Gear.ctl"/>
-			</Item>
+			<Item Name="HighGear.vi" Type="VI" URL="../Gear/HighGear.vi"/>
+			<Item Name="LowGear.vi" Type="VI" URL="../Gear/LowGear.vi"/>
 		</Item>
 		<Item Name="Port" Type="Folder">
 			<Item Name="PortC Global.vi" Type="VI" URL="../Port/PortC Global.vi"/>
@@ -258,11 +256,14 @@ AddOutputFilter chunkFilter
 			<Item Name="Arm Settings Type Def.ctl" Type="VI" URL="../Arm/Arm Settings Type Def.ctl"/>
 			<Item Name="CropArmPosition.vi" Type="VI" URL="../Arm/CropArmPosition.vi"/>
 		</Item>
+		<Item Name="PTO" Type="Folder">
+			<Item Name="DisablePTO.vi" Type="VI" URL="../PTO/DisablePTO.vi"/>
+			<Item Name="EnablePTO.vi" Type="VI" URL="../PTO/EnablePTO.vi"/>
+		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
 		<Item Name="Prefrences.vi" Type="VI" URL="../Prefrences.vi"/>
 		<Item Name="Robot Type Def.ctl" Type="VI" URL="../Robot Type Def.ctl"/>
-		<Item Name="Update Solenoids.vi" Type="VI" URL="../Solenoids/Update Solenoids.vi"/>
 		<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
 		<Item Name="SubSystems.vi" Type="VI" URL="../SubSystems.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -719,11 +720,6 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_DigitalInputDevRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputDevRef.ctl"/>
 				<Item Name="FPGA_MapDIOChannelEnumToModuleLine.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/DIO/FPGA_MapDIOChannelEnumToModuleLine.vi"/>
 				<Item Name="WPI_SwitchDevRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Switch/WPI_SwitchDevRef.ctl"/>
-				<Item Name="FPGA_DIOReadDI.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/DIO/FPGA_DIOReadDI.vi"/>
-				<Item Name="WPI_DigitalModuleGetDIO.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalModule/WPI_DigitalModuleGetDIO.vi"/>
-				<Item Name="WPI_DigitalInputToDigitalModule.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputToDigitalModule.vi"/>
-				<Item Name="WPI_DigitalInputGetValue.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalInput/WPI_DigitalInputGetValue.vi"/>
-				<Item Name="WPI_SwitchGetLimitValue.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Switch/WPI_SwitchGetLimitValue.vi"/>
 				<Item Name="FPGA_CounterERRInvalidResource.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/Counter/FPGA_CounterERRInvalidResource.vi"/>
 				<Item Name="FPGA_CounterCtrDevRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/Counter/FPGA_CounterCtrDevRef.ctl"/>
 				<Item Name="FPGA_CounterWriteReset.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/Counter/FPGA_CounterWriteReset.vi"/>
@@ -837,7 +833,6 @@ AddOutputFilter chunkFilter
 			<Item Name="Aspect Ratio Score 2016.vi" Type="VI" URL="../Vision Support Code/Aspect Ratio Score 2016.vi"/>
 			<Item Name="Area Scoring.vi" Type="VI" URL="../Vision Support Code/Area Scoring.vi"/>
 			<Item Name="Moment Score.vi" Type="VI" URL="../Vision Support Code/Moment Score.vi"/>
-			<Item Name="SoftLimitBlockers.vi" Type="VI" URL="../LowShooter/Implementation/SoftLimitBlockers.vi"/>
 			<Item Name="NI WPI Serial USB.lvlib" Type="Library" URL="../../../../../Users/Ryan/navx-mxp/labview/NI WPI/NI WPI Serial USB.lvlib"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
@@ -857,7 +852,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D2136F65-FD06-4AC9-A317-10E44B9EF7A4}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">48</Property>
+				<Property Name="Bld_version.build" Type="Int">50</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
