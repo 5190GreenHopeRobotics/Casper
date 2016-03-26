@@ -121,6 +121,7 @@ AddOutputFilter chunkFilter
 			<Item Name="TW" Type="Folder">
 				<Item Name="InitTWMotor.vi" Type="VI" URL="../Lift/InitTWMotor.vi"/>
 				<Item Name="MoveTW.vi" Type="VI" URL="../Lift/MoveTW.vi"/>
+				<Item Name="SetTWPos.vi" Type="VI" URL="../Lift/SetTWPos.vi"/>
 			</Item>
 			<Item Name="TW Global.vi" Type="VI" URL="../Lift/TW Global.vi"/>
 		</Item>
@@ -140,10 +141,18 @@ AddOutputFilter chunkFilter
 				<Item Name="JoystickMapping.ctl" Type="VI" URL="../Framework/JoystickMapping.ctl"/>
 				<Item Name="JoystickMappingNamesTypeDef.ctl" Type="VI" URL="../Framework/JoystickMappingNamesTypeDef.ctl"/>
 			</Item>
+			<Item Name="Load Values" Type="Folder">
+				<Item Name="LoadLiftMotorValues.vi" Type="VI" URL="../Framework/Load Values/LoadLiftMotorValues.vi"/>
+				<Item Name="LoadArmValues.vi" Type="VI" URL="../Framework/Load Values/LoadArmValues.vi"/>
+				<Item Name="LoadDriveValues.vi" Type="VI" URL="../Framework/Load Values/LoadDriveValues.vi"/>
+				<Item Name="LoadPortCValues.vi" Type="VI" URL="../Framework/Load Values/LoadPortCValues.vi"/>
+				<Item Name="LoadVisionValues.vi" Type="VI" URL="../Framework/Load Values/LoadVisionValues.vi"/>
+				<Item Name="LoadValuesFromDash.vi" Type="VI" URL="../Framework/LoadValuesFromDash.vi"/>
+				<Item Name="LoadTWPValues.vi" Type="VI" URL="../Framework/Load Values/LoadTWPValues.vi"/>
+			</Item>
 			<Item Name="Begin.vi" Type="VI" URL="../Framework/Begin.vi"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../Framework/Disabled.vi"/>
 			<Item Name="Finish.vi" Type="VI" URL="../Framework/Finish.vi"/>
-			<Item Name="LoadValuesFromDash.vi" Type="VI" URL="../Framework/LoadValuesFromDash.vi"/>
 			<Item Name="MapJoystick.vi" Type="VI" URL="../Framework/MapJoystick.vi"/>
 			<Item Name="Periodic Tasks.vi" Type="VI" URL="../Framework/Periodic Tasks.vi"/>
 			<Item Name="Robot Global Data.vi" Type="VI" URL="../Framework/Robot Global Data.vi"/>
@@ -161,6 +170,9 @@ AddOutputFilter chunkFilter
 				<Item Name="Drive Global Type Def.ctl" Type="VI" URL="../LED Lights/Drive Global Type Def.ctl"/>
 				<Item Name="Motor Global Type Def.ctl" Type="VI" URL="../LED Lights/Motor Global Type Def.ctl"/>
 				<Item Name="Master Slave Drive Motors Type Def.ctl" Type="VI" URL="../LED Lights/Master Slave Drive Motors Type Def.ctl"/>
+			</Item>
+			<Item Name="New Folder" Type="Folder">
+				<Item Name="TalonLights.vi" Type="VI" URL="../LED Lights/TalonLights.vi"/>
 			</Item>
 			<Item Name="LED Lights Ref.ctl" Type="VI" URL="../LED Lights/LED Lights Ref.ctl"/>
 			<Item Name="LED Lights Set Color.vi" Type="VI" URL="../LED Lights/LED Lights Set Color.vi"/>
@@ -266,6 +278,8 @@ AddOutputFilter chunkFilter
 		<Item Name="Robot Type Def.ctl" Type="VI" URL="../Robot Type Def.ctl"/>
 		<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
 		<Item Name="SubSystems.vi" Type="VI" URL="../SubSystems.vi"/>
+		<Item Name="Drive Error Type Def.ctl" Type="VI" URL="../LED Lights/Error Type Defs/Drive Error Type Def.ctl"/>
+		<Item Name="InitRollers.vi" Type="VI" URL="../LowShooter/Implementation/InitRollers.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
@@ -852,7 +866,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D2136F65-FD06-4AC9-A317-10E44B9EF7A4}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">50</Property>
+				<Property Name="Bld_version.build" Type="Int">53</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
