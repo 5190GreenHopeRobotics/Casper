@@ -204,6 +204,7 @@ AddOutputFilter chunkFilter
 				<Item Name="Template for LowShooter Immediate with Deadband.vit" Type="VI" URL="../LowShooter/Commands/Template for LowShooter Immediate with Deadband.vit"/>
 				<Item Name="Template for LowShooter Immediate.vit" Type="VI" URL="../LowShooter/Commands/Template for LowShooter Immediate.vit"/>
 				<Item Name="Template for LowShooter with Duration.vit" Type="VI" URL="../LowShooter/Commands/Template for LowShooter with Duration.vit"/>
+				<Item Name="Arm VBus.vi" Type="VI" URL="../LowShooter/Commands/Arm VBus.vi"/>
 			</Item>
 			<Item Name="Implementation" Type="Folder">
 				<Item Name="Infrastructure" Type="Folder">
@@ -217,6 +218,8 @@ AddOutputFilter chunkFilter
 				<Item Name="LowShooter Setpoints.ctl" Type="VI" URL="../LowShooter/Implementation/LowShooter Setpoints.ctl"/>
 				<Item Name="Shooter Global.vi" Type="VI" URL="../LowShooter/Implementation/Shooter Global.vi"/>
 				<Item Name="Shooter Settings Type Def.ctl" Type="VI" URL="../LowShooter/Implementation/Shooter Settings Type Def.ctl"/>
+				<Item Name="UpdateCurrent.vi" Type="VI" URL="../LowShooter/Implementation/UpdateCurrent.vi"/>
+				<Item Name="UpdateArmState.vi" Type="VI" URL="../LowShooter/Commands/UpdateArmState.vi"/>
 			</Item>
 		</Item>
 		<Item Name="AddonMotors" Type="Folder" URL="../AddonMotors">
@@ -272,11 +275,17 @@ AddOutputFilter chunkFilter
 			<Item Name="DisablePTO.vi" Type="VI" URL="../PTO/DisablePTO.vi"/>
 			<Item Name="EnablePTO.vi" Type="VI" URL="../PTO/EnablePTO.vi"/>
 		</Item>
+		<Item Name="Autonomous" Type="Folder">
+			<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
+			<Item Name="Play Info.ctl" Type="VI" URL="../Autonomous/Play Info.ctl"/>
+			<Item Name="LoadAutonomousPlays.vi" Type="VI" URL="../Autonomous/LoadAutonomousPlays.vi"/>
+			<Item Name="AutonomousFeedback.vi" Type="VI" URL="../Autonomous/AutonomousFeedback.vi"/>
+			<Item Name="Autonomous Global.vi" Type="VI" URL="../Autonomous/Autonomous Global.vi"/>
+		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
 		<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
 		<Item Name="Prefrences.vi" Type="VI" URL="../Prefrences.vi"/>
 		<Item Name="Robot Type Def.ctl" Type="VI" URL="../Robot Type Def.ctl"/>
-		<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
 		<Item Name="SubSystems.vi" Type="VI" URL="../SubSystems.vi"/>
 		<Item Name="Drive Error Type Def.ctl" Type="VI" URL="../LED Lights/Error Type Defs/Drive Error Type Def.ctl"/>
 		<Item Name="InitRollers.vi" Type="VI" URL="../LowShooter/Implementation/InitRollers.vi"/>
@@ -866,7 +875,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D2136F65-FD06-4AC9-A317-10E44B9EF7A4}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">53</Property>
+				<Property Name="Bld_version.build" Type="Int">56</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
