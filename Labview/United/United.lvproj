@@ -149,6 +149,7 @@ AddOutputFilter chunkFilter
 				<Item Name="LoadVisionValues.vi" Type="VI" URL="../Framework/Load Values/LoadVisionValues.vi"/>
 				<Item Name="LoadValuesFromDash.vi" Type="VI" URL="../Framework/LoadValuesFromDash.vi"/>
 				<Item Name="LoadTWPValues.vi" Type="VI" URL="../Framework/Load Values/LoadTWPValues.vi"/>
+				<Item Name="LoadDampValues.vi" Type="VI" URL="../Framework/Load Values/LoadDampValues.vi"/>
 			</Item>
 			<Item Name="Begin.vi" Type="VI" URL="../Framework/Begin.vi"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../Framework/Disabled.vi"/>
@@ -196,7 +197,6 @@ AddOutputFilter chunkFilter
 			<Item Name="Commands" Type="Folder">
 				<Item Name="LowShooter Immediate.vi" Type="VI" URL="../LowShooter/Commands/LowShooter Immediate.vi"/>
 				<Item Name="Move Arm to Start Position.vi" Type="VI" URL="../LowShooter/Commands/Move Arm to Start Position.vi"/>
-				<Item Name="Move Arm.vi" Type="VI" URL="../LowShooter/Commands/Move Arm.vi"/>
 				<Item Name="Read LowShooter Operation.vi" Type="VI" URL="../LowShooter/Commands/Read LowShooter Operation.vi"/>
 				<Item Name="Reserve LowShooter.vi" Type="VI" URL="../LowShooter/Commands/Reserve LowShooter.vi"/>
 				<Item Name="Retrieve.vi" Type="VI" URL="../LowShooter/Commands/Retrieve.vi"/>
@@ -205,6 +205,8 @@ AddOutputFilter chunkFilter
 				<Item Name="Template for LowShooter Immediate.vit" Type="VI" URL="../LowShooter/Commands/Template for LowShooter Immediate.vit"/>
 				<Item Name="Template for LowShooter with Duration.vit" Type="VI" URL="../LowShooter/Commands/Template for LowShooter with Duration.vit"/>
 				<Item Name="Arm VBus.vi" Type="VI" URL="../LowShooter/Commands/Arm VBus.vi"/>
+				<Item Name="Move Arm Down.vi" Type="VI" URL="../LowShooter/Commands/Move Arm Down.vi"/>
+				<Item Name="Move Arm Up.vi" Type="VI" URL="../LowShooter/Commands/Move Arm Up.vi"/>
 			</Item>
 			<Item Name="Implementation" Type="Folder">
 				<Item Name="Infrastructure" Type="Folder">
@@ -219,7 +221,6 @@ AddOutputFilter chunkFilter
 				<Item Name="Shooter Global.vi" Type="VI" URL="../LowShooter/Implementation/Shooter Global.vi"/>
 				<Item Name="Shooter Settings Type Def.ctl" Type="VI" URL="../LowShooter/Implementation/Shooter Settings Type Def.ctl"/>
 				<Item Name="UpdateCurrent.vi" Type="VI" URL="../LowShooter/Implementation/UpdateCurrent.vi"/>
-				<Item Name="UpdateArmState.vi" Type="VI" URL="../LowShooter/Commands/UpdateArmState.vi"/>
 			</Item>
 		</Item>
 		<Item Name="AddonMotors" Type="Folder" URL="../AddonMotors">
@@ -253,37 +254,45 @@ AddOutputFilter chunkFilter
 			<Item Name="Update Solenoids.vi" Type="VI" URL="../Solenoids/Update Solenoids.vi"/>
 		</Item>
 		<Item Name="Gear" Type="Folder">
+			<Item Name="Port" Type="Folder">
+				<Item Name="PortC Global.vi" Type="VI" URL="../Port/PortC Global.vi"/>
+				<Item Name="CropPortPos.vi" Type="VI" URL="../Port/CropPortPos.vi"/>
+				<Item Name="PortC Settings Type Def.ctl" Type="VI" URL="../Port/PortC Settings Type Def.ctl"/>
+				<Item Name="SetPortArmAngle.vi" Type="VI" URL="../Port/SetPortArmAngle.vi"/>
+				<Item Name="SetPortArmTicks.vi" Type="VI" URL="../Port/SetPortArmTicks.vi"/>
+				<Item Name="MovePortC.vi" Type="VI" URL="../Port/MovePortC.vi"/>
+				<Item Name="InitPortC.vi" Type="VI" URL="../Port/InitPortC.vi"/>
+			</Item>
 			<Item Name="HighGear.vi" Type="VI" URL="../Gear/HighGear.vi"/>
 			<Item Name="LowGear.vi" Type="VI" URL="../Gear/LowGear.vi"/>
-		</Item>
-		<Item Name="Port" Type="Folder">
-			<Item Name="PortC Global.vi" Type="VI" URL="../Port/PortC Global.vi"/>
-			<Item Name="CropPortPos.vi" Type="VI" URL="../Port/CropPortPos.vi"/>
-			<Item Name="PortC Settings Type Def.ctl" Type="VI" URL="../Port/PortC Settings Type Def.ctl"/>
-			<Item Name="SetPortArmAngle.vi" Type="VI" URL="../Port/SetPortArmAngle.vi"/>
-			<Item Name="SetPortArmTicks.vi" Type="VI" URL="../Port/SetPortArmTicks.vi"/>
-			<Item Name="MovePortC.vi" Type="VI" URL="../Port/MovePortC.vi"/>
-			<Item Name="InitPortC.vi" Type="VI" URL="../Port/InitPortC.vi"/>
 		</Item>
 		<Item Name="Arm" Type="Folder">
 			<Item Name="InitArm.vi" Type="VI" URL="../Framework/InitArm.vi"/>
 			<Item Name="ArmControl.vi" Type="VI" URL="../Arm/ArmControl.vi"/>
 			<Item Name="Arm Settings Type Def.ctl" Type="VI" URL="../Arm/Arm Settings Type Def.ctl"/>
 			<Item Name="CropArmPosition.vi" Type="VI" URL="../Arm/CropArmPosition.vi"/>
+			<Item Name="UpdateArmState.vi" Type="VI" URL="../LowShooter/Commands/UpdateArmState.vi"/>
+			<Item Name="ArmUpdateLimits.vi" Type="VI" URL="../Arm/ArmUpdateLimits.vi"/>
 		</Item>
 		<Item Name="PTO" Type="Folder">
 			<Item Name="DisablePTO.vi" Type="VI" URL="../PTO/DisablePTO.vi"/>
 			<Item Name="EnablePTO.vi" Type="VI" URL="../PTO/EnablePTO.vi"/>
 		</Item>
 		<Item Name="Autonomous" Type="Folder">
+			<Item Name="Autonomous Log" Type="Folder">
+				<Item Name="UpdateAutoLog.vi" Type="VI" URL="../Autonomous/Autonomous Log/UpdateAutoLog.vi"/>
+			</Item>
 			<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
 			<Item Name="Play Info.ctl" Type="VI" URL="../Autonomous/Play Info.ctl"/>
 			<Item Name="LoadAutonomousPlays.vi" Type="VI" URL="../Autonomous/LoadAutonomousPlays.vi"/>
 			<Item Name="AutonomousFeedback.vi" Type="VI" URL="../Autonomous/AutonomousFeedback.vi"/>
 			<Item Name="Autonomous Global.vi" Type="VI" URL="../Autonomous/Autonomous Global.vi"/>
 		</Item>
+		<Item Name="Timer" Type="Folder">
+			<Item Name="TimerStart.vi" Type="VI" URL="../Timer/TimerStart.vi"/>
+			<Item Name="TimerStop.vi" Type="VI" URL="../Timer/TimerStop.vi"/>
+		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
-		<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
 		<Item Name="Prefrences.vi" Type="VI" URL="../Prefrences.vi"/>
 		<Item Name="Robot Type Def.ctl" Type="VI" URL="../Robot Type Def.ctl"/>
 		<Item Name="SubSystems.vi" Type="VI" URL="../SubSystems.vi"/>
@@ -829,6 +838,9 @@ AddOutputFilter chunkFilter
 				<Item Name="NetComm_getJoystickButtons.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_getJoystickButtons.vi"/>
 				<Item Name="NetComm_getJoystickAxes.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/NetworkCommunication/NetComm_getJoystickAxes.vi"/>
 				<Item Name="WPI_JoystickGetValues.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Joystick/WPI_JoystickGetValues.vi"/>
+				<Item Name="Connection Info.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/Connection Info.vi"/>
+				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
+				<Item Name="NI_Gmath.lvlib" Type="Library" URL="/&lt;vilib&gt;/gmath/NI_Gmath.lvlib"/>
 			</Item>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -857,6 +869,9 @@ AddOutputFilter chunkFilter
 			<Item Name="Area Scoring.vi" Type="VI" URL="../Vision Support Code/Area Scoring.vi"/>
 			<Item Name="Moment Score.vi" Type="VI" URL="../Vision Support Code/Moment Score.vi"/>
 			<Item Name="NI WPI Serial USB.lvlib" Type="Library" URL="../../../../../Users/Ryan/navx-mxp/labview/NI WPI/NI WPI Serial USB.lvlib"/>
+			<Item Name="Move Arm.vi" Type="VI" URL="../LowShooter/Commands/Move Arm.vi"/>
+			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
+			<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="FRC Robot Boot-up Deployment" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
@@ -875,7 +890,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{D2136F65-FD06-4AC9-A317-10E44B9EF7A4}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">56</Property>
+				<Property Name="Bld_version.build" Type="Int">77</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>

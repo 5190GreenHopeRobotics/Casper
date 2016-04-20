@@ -47,6 +47,7 @@
 		<Item Name="Untitled 3 (SubVI).vi" Type="VI" URL="../Untitled 3 (SubVI).vi"/>
 		<Item Name="Init.vi" Type="VI" URL="../Settings/Init.vi"/>
 		<Item Name="AutonomousComboBox.vi" Type="VI" URL="../AutonomousComboBox.vi"/>
+		<Item Name="GlobalSettings.vi" Type="VI" URL="../GlobalSettings.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="IMAQ Create" Type="VI" URL="/&lt;vilib&gt;/vision/Basics.llb/IMAQ Create"/>
